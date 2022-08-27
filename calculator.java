@@ -8,9 +8,12 @@ class Firstclass {
         System.out.println("As you want to use my calculater you have to wirte your name");
         Scanner sc = new Scanner(System.in);
         String a = sc.nextLine();
-        System.out.println(" hii " + a + " enter any two  your digits please");
+        System.out.println(" hii " + a + " enter your first digit");
         Scanner cs = new Scanner(System.in);
         int q = cs.nextInt();
+        Scanner xz = new Scanner(System.in);
+        System.out.println("Select operator\n press '1' for sum \n press '2' for substract \n press '3' for divide \n press '4' for multiply");
+        int operator = xz.nextInt();
         System.out.println("kindle enter yout second value");
         Scanner ms = new Scanner(System.in);
         int w = ms.nextInt();
@@ -18,25 +21,21 @@ class Firstclass {
         int diff = q - w;
         int div = q / w;
         int mut = q * w;
-        Scanner xz = new Scanner(System.in);
-        System.out.println(" press 1 for sum \n press 2 for substract \n press 3 for divide \n press 4 for multiply");
-        int r = xz.nextInt();
-        switch (r) {
+        switch (operator) {
             case 1:
-                System.out.println(sum);
+                System.out.println(q + " + " + w + " output is = " + sum);
                 break;
             case 2:
-                System.out.println(diff);
+                System.out.println(q + " - " + w + " output is = " + diff);
                 break;
             case 3:
-                System.out.println(div);
+                System.out.println(q + " / " + w + " output is = " + div);
                 break;
             case 4:
-                System.out.println(mut);
+                System.out.println(q + " * " + w + " output is = " + mut);
                 break;
             default:
-                System.out
-                        .println("invalid command");
+                System.out.println("invalid command");
         }
     }
 }
